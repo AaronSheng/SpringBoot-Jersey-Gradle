@@ -4,6 +4,10 @@ spring:
     desc: Aaron SpringBoot Project
     version: 4.0.0
     packageName: com.aaron
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
 
 server:
-  port: 8900
+  port: 8800

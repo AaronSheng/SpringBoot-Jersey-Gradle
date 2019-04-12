@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component
 class UserResourceImpl @Autowired constructor(
         private val userService: UserService
 ): UserResource {
-    override fun get(userId: Long): Result<User> {
+    override fun get(userId: String): Result<String> {
         return Result(userService.getUser(userId))
     }
 }

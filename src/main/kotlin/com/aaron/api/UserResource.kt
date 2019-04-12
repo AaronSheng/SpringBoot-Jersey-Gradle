@@ -22,6 +22,6 @@ interface UserResource {
     fun get(
         @ApiParam(value = "用户ID", required = true)
         @PathParam("userId")
-        userId: Long
-    ): Result<User>
+        userId: String
+    ): Result<String>
 }

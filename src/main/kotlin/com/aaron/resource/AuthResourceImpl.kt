@@ -5,7 +5,6 @@ import com.aaron.config.RestResource
 import com.aaron.pojo.Auth
 import com.aaron.pojo.Result
 import com.aaron.service.AuthService
-import com.aaron.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
 
 /**

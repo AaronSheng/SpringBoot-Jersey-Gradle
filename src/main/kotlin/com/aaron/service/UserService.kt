@@ -1,6 +1,5 @@
 package com.aaron.service
 
-import com.aaron.pojo.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.stereotype.Service

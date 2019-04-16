@@ -5,14 +5,26 @@ import io.swagger.jaxrs.listing.ApiListingResource
 import io.swagger.jaxrs.listing.SwaggerSerializers
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.boot.autoconfigure.AutoConfigureBefore
+import org.springframework.boot.autoconfigure.AutoConfigureOrder
+import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication
+import org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration
 import org.springframework.boot.context.properties.EnableConfigurationProperties
+import org.springframework.context.annotation.Configuration
+import org.springframework.context.annotation.Profile
+import org.springframework.core.Ordered
 import org.springframework.stereotype.Component
 import javax.annotation.PostConstruct
 
 /**
  * Created by Aaron Sheng on 2018/6/12.
  */
-@Component
+
+@Configuration
+@ConditionalOnWebApplication
+@AutoConfigureOrder(Ordered.HIGHEST_PRECEDENCE)
+@AutoConfigureBefore(JerseyAutoConfiguration::class)
+@Profile("!prod")
 class JerseySwaggerConfig : JerseyConfig() {
     @Value("\${spring.application.desc:#{null}}")
     private val applicationDesc: String? = null

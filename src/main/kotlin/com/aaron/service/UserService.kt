@@ -12,6 +12,7 @@ class UserService @Autowired constructor(
     private val redisTemplate: RedisTemplate<String, String>
 ) {
     fun getUser(id: String): String {
+        redisTemplate.opsForValue().set(id, id)
         return redisTemplate.opsForValue().get(id)
     }
 }

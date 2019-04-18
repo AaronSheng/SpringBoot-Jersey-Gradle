@@ -8,6 +8,7 @@ buildscript {
         gradleJooqVersion = "2.0.7"
         gradleDependencyVersion = "1.0.4.RELEASE"
         springBootVersion = "2.1.3.RELEASE"
+        apacheCommonVersion = "2.6.1"
         swaggerVersion = "1.5.17"
         jaxrsVersion = "2.1"
         jacksonVersion = "2.9.2"
@@ -75,6 +76,7 @@ dependencies {
     compile "io.swagger:swagger-annotations:$swaggerVersion"
     compile "javax.ws.rs:javax.ws.rs-api:$jaxrsVersion"
     compile "io.swagger:swagger-jersey2-jaxrs:$swaggerVersion"
+    compile "org.apache.commons:commons-pool2:$apacheCommonVersion"
 
     compile "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion"
     compile "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
